@@ -1,2 +1,2 @@
 //Reading line of integers, divided of whitespace betwen integers
-int[] int = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray<int>();
+int[] integer = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray<int>();
