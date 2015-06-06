@@ -1,3 +1,17 @@
 //Reading line of integers, divided of whitespace betwen integers
 int[] integer = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray<int>();
 int[] integer = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+----------------------------------------------------------------------------------------
+The Euclidean distance between two 3D points is:
+float deltaX = x1 - x0;
+float deltaY = y1 - y0;
+float deltaZ = z1 - z0;
+float distance = (float) Math.Sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+
+with LINQ you can do this:
+var dist = Math.Sqrt(point1.Zip(point2, (a, b) => (a - b)*(a - b)).Sum())
+
+float distance=	(float) Math.Sqrt(Math.Pow(point1[0]-point2[0],2) + 
+						Math.Pow(point1[1]-point2[1],2) + 
+						Math.Pow(point1[2]-point2[2],2))
